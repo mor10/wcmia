@@ -24,6 +24,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Layout
 # Typography
 # Elements
 # Forms
@@ -259,6 +260,29 @@ table {
 td,
 th {
 	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+/* Move header to left side at 900px width using flexbox */
+@media screen and (min-width: 900px) {
+	.site {
+		position: relative;
+		display: flex;
+	}
+	
+	.site-header {
+        flex: 0 0 256px;
+		height: 100vh;
+		border-left: 2em solid white;
+	}
+
+	.site-content {
+        flex: 1 1 auto;
+	}
+	
 }
 
 /*--------------------------------------------------------------

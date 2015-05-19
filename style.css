@@ -842,16 +842,10 @@ ul.nav-menu {
 }
 
 .filter-blocks {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
 	margin-bottom: 1.6em;
 }
 
-.filter-block {
-	width: 33.33%;
-}
+
 
 .filter-title {
 	font-size: 1.6em;
@@ -875,23 +869,16 @@ ul.nav-menu {
 	padding: 0 0 .5em .75em;
 }
 
-.filter-sub-nav {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: end;
-	-webkit-justify-content: flex-end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
-}
+
 .filter-sub-nav a {
+	display: block;
+	margin-bottom: 1em;
+	margin-left: 1em;
 	padding: .55em 2.2em ;
 	color: black;
 	font-size: 1.2em;
 	border: solid 3px black;
 	font-weight: 600;
-	margin-left: 1em;
 }
 
 .filter-sub-nav a:hover {
@@ -899,7 +886,27 @@ ul.nav-menu {
 	color: #ededed;
 }
 
+@media screen and (min-width: 800px) {
+	
+	.filter-blocks {
+		display: flex;
+		justify-content: space-between;
+	}
 
+	.filter-block {
+		width: 30%;
+	}
+
+	.filter-sub-nav {
+		display: flex;
+	    justify-content: flex-end;
+	}
+
+	.filter-sub-nav a { 
+		display: inherit;
+		margin-bottom: 0;
+	}
+}
 
 .movie-index {
 	padding: 2em;

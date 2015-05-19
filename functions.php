@@ -75,6 +75,24 @@ function wcmia_content_width() {
 }
 add_action( 'after_setup_theme', 'wcmia_content_width', 0 );
 
+/**
+ * Display descriptions in main navigation.
+ *
+ * @param string  $item_output The menu item output.
+ * @param WP_Post $item        Menu item object.
+ * @param int     $depth       Depth of the menu.
+ * @param array   $args        wp_nav_menu() arguments.
+ * @return string Menu item with possible description.
+ */
+function mod_nav_description( $item_output, $item, $depth, $args ) {
+	if ( 'primary' == $args->theme_location && $item->description ) {
+		$item_output = str_replace( '">' . $args->link_before, '">' . $args->link_before . '<div class="menu-item-description">' . $item->description . '</div>', $item_output );
+	}
+
+	return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'mod_nav_description', 10, 4 );
+
 
 /**
  * Enqueue scripts and styles.

@@ -108,6 +108,12 @@ function wcmia_scripts() {
 
 	wp_enqueue_script( 'wcmia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+    if (is_home()) {
+        wp_enqueue_script( 'wcmia-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery'), '20150406', true ); 
+        wp_enqueue_script( 'wcmia-isotope-settings', get_template_directory_uri() . '/js/isotope.settings.js', array('wcmia-isotope'), '20150406', true ); 
+        wp_enqueue_script( 'wcmia-imagesloaded', get_template_directory_uri() . '/js/libs/imagesloaded.js', array('wcmia-isotope'), '20150406' );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'wcmia_scripts' );
 

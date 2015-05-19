@@ -117,12 +117,6 @@ function wcmia_entry_footer() {
 		}
 	}
 
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'wcmia' ), esc_html__( '1 Comment', 'wcmia' ), esc_html__( '% Comments', 'wcmia' ) );
-		echo '</span>';
-	}
-
 	edit_post_link( esc_html__( 'Edit', 'wcmia' ), '<span class="edit-link">', '</span>' );
 }
 endif;

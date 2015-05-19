@@ -811,7 +811,11 @@ ul.nav-menu {
 .index-header {
 	padding: 2em;
 	background: #ededed;
+}
 
+/* Hide filters by default */
+.movie-filter {
+	display: none;
 }
 
 .index-header a {

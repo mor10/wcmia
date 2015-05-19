@@ -759,12 +759,29 @@ ul.nav-menu {
 	padding: 1em;
 }
 
+.entry-title {
+	margin-bottom: .2em;
+	color: black;
+	line-height: 1.3em;
+}
+
+.creator {
+  font-weight: lighter;
+  font-size: 50%;
+}
+
+.entry-meta {
+	margin-bottom: .4em;
+	padding-bottom: .8em;
+	font-size: 1.1em;
+	border-bottom: 1px solid hsl(0, 0%, 75%);
+}
 .artist-wrapper{
 	background-color: #eee;
 }
 
 @media screen and (min-width: 500px) {
-	
+
 	.centered {
 		display: flex;
 		max-width: 800px;
@@ -777,6 +794,9 @@ ul.nav-menu {
 		margin-right: 1.4em;
 	}
 	
+	.entry-title {
+		margin-top: 0;
+	}
 }
 
 /*--------------------------------------------------------------

@@ -50,7 +50,39 @@
 		        	</h1>
 
 					<div class="entry-meta">
-						<?php wcmia_posted_on(); ?>
+						<span class="time">
+			            	<?php
+							$terms = get_the_terms( $post->ID, 'durations' );
+													
+							if ( $terms && ! is_wp_error( $terms ) ) : 
+
+								$durations_array = array();
+								foreach ( $terms as $term ) {
+									$durations_array[] = $term->name;
+								}
+								$durations = join( ", ", $durations_array );
+								
+								echo $durations; 
+
+							endif; 
+							?>
+			            </span> | 
+			            <span class="genre">
+			                <?php
+							$terms = get_the_terms( $post->ID, 'genres' );
+													
+							if ( $terms && ! is_wp_error( $terms ) ) : 
+								$genres_array = array();
+								foreach ( $terms as $term ) {
+									$genres_array[] = $term->name;
+								}														
+								$genres = join( ", ", $genres_array );
+								
+								echo $genres; 
+
+							endif; 
+							?>
+			       		 </span>
 					</div><!-- .entry-meta -->
 				</header><!-- .entry-header -->
 

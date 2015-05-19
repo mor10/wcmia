@@ -755,17 +755,28 @@ ul.nav-menu {
 /*--------------------------------------------------------------
 ## Movie Posts
 --------------------------------------------------------------*/
-
 .centered {
-	max-width: 800px;
-	padding: 2em;
-	margin: auto;
+	padding: 1em;
 }
 
 .artist-wrapper{
 	background-color: #eee;
-	width:100%;
-	padding: 2em 0;
+}
+
+@media screen and (min-width: 500px) {
+	
+	.centered {
+		display: flex;
+		max-width: 800px;
+		padding: 2em;
+		margin: auto;
+	}
+
+	.post-image {
+		flex: 0 0 160px;
+		margin-right: 1.4em;
+	}
+	
 }
 
 /*--------------------------------------------------------------

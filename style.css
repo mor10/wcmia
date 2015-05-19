@@ -667,7 +667,7 @@ ul.nav-menu {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 500px) {
 	.menu-toggle {
 		display: none;
 	}

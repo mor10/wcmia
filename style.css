@@ -808,6 +808,95 @@ ul.nav-menu {
 ## Movie Index
 --------------------------------------------------------------*/
 
+.index-header {
+	padding: 2em;
+	background: #ededed;
+
+}
+
+.index-header a {
+	color: black;
+	text-decoration: none;
+}
+
+.filter-trigger {
+	text-align: right;
+	text-transform: lowercase;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+
+.filter-trigger span {
+	color: hsl(0, 0%, 65%);
+	font-style: italic;
+}
+
+.filter-trigger i {
+	  font-size: 138%;
+	  display: inline-block;
+	  vertical-align: bottom;
+}
+
+.filter-blocks {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 1.6em;
+}
+
+.filter-block {
+	width: 33.33%;
+}
+
+.filter-title {
+	font-size: 1.6em;
+	font-weight: 600;
+	text-transform: lowercase;
+	color: black;
+	margin-top: .5em;
+}
+
+.filter-block ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 1.3em;
+	font-weight: 600;
+	color: black;
+}
+
+.filter-block li label {
+	display: inline-block;
+	padding: 0 0 .5em .75em;
+}
+
+.filter-sub-nav {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+.filter-sub-nav a {
+	padding: .55em 2.2em ;
+	color: black;
+	font-size: 1.2em;
+	border: solid 3px black;
+	font-weight: 600;
+	margin-left: 1em;
+}
+
+.filter-sub-nav a:hover {
+	background: black;
+	color: #ededed;
+}
+
+
+
 .movie-index {
 	padding: 2em;
 	display: flex;

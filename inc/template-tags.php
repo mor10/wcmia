@@ -258,3 +258,14 @@ function wcmia_category_transient_flusher() {
 }
 add_action( 'edit_category', 'wcmia_category_transient_flusher' );
 add_action( 'save_post',     'wcmia_category_transient_flusher' );
+
+/**
+ * Display all available posts on front page and index pages
+ */
+
+function wcmia_display_all( $query ) {
+	if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', '-1' );
+    }
+}
+add_action( 'pre_get_posts', 'wcmia_display_all' );

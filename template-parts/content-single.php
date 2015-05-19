@@ -28,7 +28,7 @@
 	<div class="info-wrapper">
 		<div class="centered">
 
-			<div class="movie-poster">
+			<div class="movie-poster post-image">
 				<?php
 				// check if post has as post thumbail assigned to it
 					if ( has_post_thumbnail() ) {
@@ -88,6 +88,45 @@
 
 				<div class="entry-content">
 					<?php the_content(); ?>
+				</div><!-- .entry-content -->
+
+			</div><!-- .movie-info -->
+
+		</div><!-- .centered -->
+	</div><!-- .info-wrapper -->
+
+	<div class="artist-wrapper">
+		<div class="centered">
+
+			<div class="artist-picture post-image">
+				<?php 
+					$image = get_field('profile_picture');
+					if( !empty($image) ): ?>
+						<img src="<?php echo $image['sizes']['medium']; ?>" alt="" >
+
+				<?php endif; ?>
+			</div>
+
+			<div class="movie-info">
+
+				<header class="entry-header">
+					<h1 class="entry-title"> 
+		                <?php the_field('first_name'); ?> <?php the_field('last_name'); ?>
+		        	</h1>
+
+					<div class="entry-meta">
+						<span class="major">
+			            	<?php
+							$cat = get_the_category(); 
+							$cat = $cat[0]; 
+							echo $cat->cat_name; 
+							?>
+			            </span>
+					</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					<?php the_field('artist_statement'); ?>
 				</div><!-- .entry-content -->
 
 			</div><!-- .movie-info -->

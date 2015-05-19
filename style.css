@@ -300,6 +300,24 @@ th {
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-title {
+	margin: 0;
+}
+
+.site-title a {
+	display: block;
+	width: 220px;
+	height: 257px;
+	background: url('images/mod-logo.png') top left no-repeat;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body,

@@ -805,6 +805,61 @@ ul.nav-menu {
 }
 
 /*--------------------------------------------------------------
+## Movie Index
+--------------------------------------------------------------*/
+
+.movie-item {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 36px;
+}
+
+.movie-item img {
+	display: block;
+}
+
+.infocontainer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding: 3em 14px 14px;
+	color: #fff;
+	
+}
+
+.infocontainer h2 {
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: 0;
+	line-height: 1.2em;
+}
+
+a .infocontainer {
+	color: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(49%,rgba(0,0,0,0.85)), color-stop(100%,rgba(0,0,0,0.85))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 49%,rgba(0,0,0,0.85) 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 49%, rgba(0,0,0,0.85) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.85) 49%,rgba(0,0,0,0.85) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#d9000000',GradientType=0 ); /* IE6-9 */
+}
+
+.artistname {
+	font-weight: 600;
+	margin: .1em 0;
+}
+
+.artistname span {
+	font-weight: 400;
+}
+
+.info-meta {
+	font-weight: 300;
+	font-size: 90%;
+	margin-top: .1em;
+	line-height: 1.3em;
+}
+
+/*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,

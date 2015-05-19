@@ -808,6 +808,13 @@ ul.nav-menu {
 ## Movie Index
 --------------------------------------------------------------*/
 
+.movie-index {
+	padding: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
 .movie-item {
 	position: relative;
 	max-width: 300px;

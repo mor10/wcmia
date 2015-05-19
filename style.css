@@ -266,13 +266,25 @@ th {
 # Layout
 --------------------------------------------------------------*/
 
+@media screen and (min-width: 500px) and (max-width: 899px) {
+
+	.persistent {
+		display: flex;
+	}
+
+	.site-branding {
+		flex: 0 0 220px;
+		margin-right: 1em;
+	}
+}
+
 /* Move header to left side at 900px width using flexbox */
 @media screen and (min-width: 900px) {
+	
 	.site {
 		position: relative;
 		display: flex;
 	}
-	
 	.site-header {
         flex: 0 0 256px;
 		height: 100vh;
@@ -315,6 +327,7 @@ th {
 
 .site-title a {
 	display: block;
+	margin: 0 auto;
 	width: 220px;
 	height: 257px;
 	background: url('images/mod-logo.png') top left no-repeat;

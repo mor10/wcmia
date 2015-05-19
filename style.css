@@ -289,7 +289,14 @@ th {
 		background: #222;
 
 	}
-	
+
+	.main-navigation {
+		display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+		height: calc(100vh - 244px);
+	}
+
 }
 
 /*--------------------------------------------------------------
@@ -549,9 +556,6 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
 	width: 100%;
 }
 

@@ -25,25 +25,37 @@
 		</div><!-- .embed-container -->
 	</div><!-- .movie-wrapper -->
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<div class="info-wrapper">
+		<div class="centered">
 
-		<div class="entry-meta">
-			<?php wcmia_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+			<div class="movie-poster">
+				<?php
+				// check if post has as post thumbail assigned to it
+					if ( has_post_thumbnail() ) {
+						echo '<figure class="poster">';
+						the_post_thumbnail('mod-poster');
+						echo '</figure>';
+					}
+				?>
+			</div><!-- .movie-poster -->
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wcmia' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+			<div class="movie-info">
 
-	<footer class="entry-footer">
-		<?php wcmia_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+					<div class="entry-meta">
+						<?php wcmia_posted_on(); ?>
+					</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div><!-- .entry-content -->
+
+			</div><!-- .movie-info -->
+
+		</div><!-- .centered -->
+	</div><!-- .info-wrapper -->
+
 </article><!-- #post-## -->

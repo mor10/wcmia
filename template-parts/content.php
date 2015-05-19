@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="movie-item">
 
 	<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<?php 
@@ -15,5 +15,23 @@
         }
         ?>
 	</a>
+
+	<div class="infocontainer">
+        <h2><?php the_title(); ?></h2> 
+        <div class="artistname">
+            <span>by</span> <?php the_field('first_name'); ?> <?php the_field('last_name'); ?>
+        </div><!-- .artistname -->
+        <div class="info-meta">
+            <span class="time">
+                <?php echo strip_tags( get_the_term_list( $post->ID, 'durations', '', ', ' ) ); ?>
+            </span> | 
+            <span class="major">
+                <?php echo strip_tags( get_the_category_list( ', ') ); ?>
+            </span> | 
+            <span class="genre">
+                <?php echo strip_tags( get_the_term_list( $post->ID, 'genres', '', ', ' ) ); ?>
+             </span>
+        </div><!-- .info-meta -->
+    </div><!-- .infocontainer -->
 
 </article><!-- #post-## -->

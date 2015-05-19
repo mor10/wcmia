@@ -102,8 +102,9 @@
 				<?php 
 					$image = get_field('profile_picture');
 					if( !empty($image) ): ?>
-						<img src="<?php echo $image['sizes']['student-head']; ?>" alt="" >
-
+						<figure class="headshot">
+							<img src="<?php echo $image['sizes']['student-head']; ?>" alt="" >
+						</figure>
 				<?php endif; ?>
 			</div>
 

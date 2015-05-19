@@ -150,7 +150,7 @@ svg:not(:root) {
 }
 
 figure {
-	margin: 1em 40px;
+	margin: 0;
 }
 
 hr {
@@ -758,8 +758,14 @@ ul.nav-menu {
 
 .centered {
 	max-width: 800px;
-	padding: 0 2em;
+	padding: 2em;
 	margin: auto;
+}
+
+.artist-wrapper{
+	background-color: #eee;
+	width:100%;
+	padding: 2em 0;
 }
 
 /*--------------------------------------------------------------

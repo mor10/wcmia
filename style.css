@@ -269,6 +269,7 @@ button,
 input,
 select,
 textarea {
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #404040;
 	font-size: 16px;
 	font-size: 1rem;
@@ -282,6 +283,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: 'Roboto', sans-serif;
 }
 
 p {

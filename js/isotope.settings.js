@@ -1,6 +1,15 @@
 // Isotope settings
 jQuery(document).ready(function ($) {
 
+    // Clear all checkboxes
+    $('a.view-all').click(function () {
+        $('.option-set input:checked').removeAttr('checked');
+        var clear = '*';
+        $container.isotope({ filter: clear });
+        $('.option-set li:has(input:checkbox:not(:checked))').removeClass('active');
+        return false;
+    });
+    
     // Set up key variables
     var $container = $('.movie-index'); // The container that holds all the isotope items
     var $checkboxes = $('.movie-filter input'); // All the individual filter buttons

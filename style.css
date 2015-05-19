@@ -294,7 +294,7 @@ th {
 		display: flex;
         flex-direction: column;
         justify-content: flex-end;
-		height: calc(100vh - 244px);
+		height: calc(100vh - 289px);
 	}
 
 }
@@ -302,6 +302,12 @@ th {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
+.site-header {
+	position: relative;
+	background-color: #222;
+	color: white;
+}
 
 .site-title {
 	margin: 0;
@@ -585,13 +591,25 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
 	position: relative;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+}
+
+ul.nav-menu {
+	padding: 1em;
+}
+
+.nav-menu li a {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: 1px solid hsl(0, 0%, 25%);
+	font-size: 1.4em;
+	text-transform: lowercase;
+	color: white;
 }
 
 .main-navigation ul ul {

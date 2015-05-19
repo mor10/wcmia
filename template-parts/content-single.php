@@ -102,7 +102,7 @@
 				<?php 
 					$image = get_field('profile_picture');
 					if( !empty($image) ): ?>
-						<img src="<?php echo $image['sizes']['medium']; ?>" alt="" >
+						<img src="<?php echo $image['sizes']['student-head']; ?>" alt="" >
 
 				<?php endif; ?>
 			</div>

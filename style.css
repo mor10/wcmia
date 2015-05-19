@@ -624,6 +624,12 @@ ul.nav-menu {
 	color: white;
 }
 
+.menu-item-description {
+	font-size: 60%;
+	font-style: italic;
+	color: hsl(0, 0%, 50%);
+}
+
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;

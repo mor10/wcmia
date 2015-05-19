@@ -282,6 +282,13 @@ th {
 	.site-content {
         flex: 1 1 auto;
 	}
+
+	.persistent {
+		position: fixed;
+		width: 220px;
+		background: #222;
+
+	}
 	
 }
 

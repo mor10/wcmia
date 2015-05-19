@@ -269,3 +269,37 @@ function wcmia_display_all( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'wcmia_display_all' );
+
+
+/**
+ * Create classes from Project Type taxonomy
+ * Allows for Isotope content filtering based on classes
+ * Function outputs taxonomy terms as classes for each movie item
+ */
+
+function wcmia_create_tax_classes() {
+
+	// get post by post id
+	$post = get_post( $post->ID );
+
+	// get post type by post
+	$post_type = $post->post_type;
+
+	// get post type taxonomies
+	$taxonomies = get_object_taxonomies( $post_type, 'objects' );
+
+	$classes = array();
+	foreach ( $taxonomies as $taxonomy_slug => $taxonomy ) {
+		// get the terms related to post
+    	$terms = get_the_terms( $post->ID, $taxonomy_slug );
+    	
+	    if($terms) {
+	        foreach ($terms as $term) {
+	            $classes[] = $term->slug;
+	        }
+	        $the_classes = implode(' ', $classes);
+	          
+	    }
+	}
+	return $the_classes; 
+}

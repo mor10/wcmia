@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="movie-item">
+<article id="post-<?php the_ID(); ?>" class="movie-item <?php echo wcmia_create_tax_classes(); ?>">
 
 	<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<?php 

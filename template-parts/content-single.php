@@ -42,7 +42,12 @@
 			<div class="movie-info">
 
 				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<h1 class="entry-title">
+					  	<?php the_title(); ?> 
+			            <span class="creator">by 
+			                <?php the_field('first_name'); ?> <?php the_field('last_name'); ?>
+			            </span>
+		        	</h1>
 
 					<div class="entry-meta">
 						<?php wcmia_posted_on(); ?>

@@ -119,6 +119,10 @@ function wcmia_scripts() {
         wp_enqueue_script( 'wcmia-hide-filters', get_template_directory_uri() . '/js/hide-filters.js', array('jquery'), '20150406' );
     }
 
+    if ( is_singular() ) {
+		wp_enqueue_script( 'video-fullscreen', get_template_directory_uri() . '/js/mediaelement-settings.js', array(jquery), '20150426', true );
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'wcmia_scripts' );
 

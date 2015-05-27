@@ -992,6 +992,7 @@ a .infocontainer {
 }
 
 .student {
+	position: relative;
 	padding-top: 2em;
 	margin-bottom: 2em;
 }
@@ -1006,6 +1007,14 @@ a .infocontainer {
 	.student {
 		width: calc(25% - 2em);
 	}
+}
+
+.alphabet {
+	position: absolute;
+	top: -.4em;
+	font-size: 1.4em;
+	font-weight: bolder;
+	font-family: 'Roboto';
 }
 
 .student a {

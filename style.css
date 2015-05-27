@@ -759,6 +759,71 @@ ul.nav-menu {
 	padding: 1em;
 }
 
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; 
+}
+
+/* Hide default play button */
+.mejs-overlay-button {
+	display: none;
+}
+
+.control {
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.control a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(50% - 3px);
+	text-align: center;
+	background: hsla(0, 0%, 0%, .20);
+	color: white;
+	text-transform: lowercase;
+	text-decoration: none;
+}
+
+.control a.full {
+	width: 100%;
+}
+
+.control a:hover {
+	background: hsla(0, 0%, 0%, .55);
+}
+
+.play-button {
+	position: relative;
+	display: block;
+	width: 240px;
+	padding: 1.3em;
+	margin-left: 82px;
+	font-size: 1.1em;
+	background: black;
+}
+
+.play-button i{
+	position: absolute;
+	display: block;
+	background: white;
+	color: black;
+	top: 0;
+	left: -82px;
+	height: 82px;
+	width: 82px;
+	font-size: 138%;
+	line-height: 82px;
+}
+
 .entry-title {
 	margin-bottom: .2em;
 	color: black;

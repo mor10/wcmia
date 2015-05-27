@@ -104,6 +104,9 @@ function wcmia_scripts() {
 
 	wp_enqueue_style( 'mod-google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600|Roboto:300,500,500italic');
 
+	// Icons
+	wp_enqueue_style( 'mod-icons', get_template_directory_uri() . '/fonts/icomoon/style.css');
+
 	wp_enqueue_script( 'wcmia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'wcmia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

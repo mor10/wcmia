@@ -967,6 +967,64 @@ a .infocontainer {
 }
 
 /*--------------------------------------------------------------
+10.2 Student Index
+--------------------------------------------------------------*/
+
+.students-header {
+	font-size: 1.4em;
+	font-weight: 300;
+	text-transform: lowercase;
+	text-align: center;
+	margin: 2em 2em 0;
+}
+
+@media screen and (min-width: 900px) {
+	.students-header {
+		text-align: right;
+	}
+}
+
+.student-index {
+	padding: 3em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.student {
+	padding-top: 2em;
+	margin-bottom: 2em;
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) {
+	.student {
+		width: calc(50% - 1em);
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.student {
+		width: calc(25% - 2em);
+	}
+}
+
+.student a {
+	text-decoration: none;
+}
+
+.student-name {
+	font-family: 'Roboto';
+	font-size: 1.2em;
+	font-weight: bolder;
+	margin-top: 0;
+}
+
+.student h3 {
+	color: black;
+}
+
+
+/*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
